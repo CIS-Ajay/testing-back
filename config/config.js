@@ -6,5 +6,5 @@ module.exports = {
     accessTokenExpiration: process.env.ACCESS_TOKEN_EXPIRATION || '10m',
     refreshTokenExpiration: process.env.REFRESH_TOKEN_EXPIRATION || '5m',
     mongodbUri: process.env.MONGODB_URI,
-    ip: process.env.IP || 'localhost',
+    ip: process.env.IP || '0.0.0.0',
 };
