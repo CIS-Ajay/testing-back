@@ -1,3 +1,4 @@
+// userModel.js
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -10,14 +11,19 @@ const userSchema = new mongoose.Schema({
     firstName: { type: String, required: [true, 'First name is required'] },
     lastName: { type: String, required: [true, 'Last name is required'] },
     dateOfBirth: { type: Date, required: [true, 'Date of birth is required'] },
-    profilePicture: { type: String },
-    refreshToken: { type: String },
-    refreshTokenSecret: { type: String },
+    profilePicture: String,
+    refreshToken: String,
+    refreshTokenSecret: String,
     invalidatedTokens: [{ type: String }],
     loggedOut: {
         type: Boolean,
         default: false
-    }
+    },
+    resetPasswordToken: String,
+    resetPasswordExpire: Date,
+    // otpExpiration: Date,
+    // otp: String,
+    // isVerified: { type: Boolean, default: false },
 
 });
 

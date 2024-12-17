@@ -7,7 +7,7 @@ module.exports = {
 
         try {
             const newTask = new Task({ title, description, dueDate, priority, status, userId });
-            console.log("newwwwtassskkk",newTask);
+            console.log("new-task",newTask);
             
             await newTask.save();
             res.status(201).json(newTask);
